@@ -175,6 +175,26 @@ CATEGORY_KEYWORDS = {
     ]
 }
 
+CATEGORIES = [
+    "ransomware",
+    "phishing",
+    "account_compromise",
+    "credential_access",
+    "lateral_movement",
+    "beaconing",
+    "network_intrusion",
+    "data_exfiltration",
+    "privilege_escalation",
+    "suspicious_powershell",
+    "impossible_travel",
+    "suspicious_login",
+    "web_shell",
+    "insider_threat",
+    "cloud_security",
+    "identity",
+    "incident_response"
+]
+
 SECTION_KEYWORDS = [
     "purpose",
     "indicators",
