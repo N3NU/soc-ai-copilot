@@ -1,0 +1,54 @@
+TITLE: Multi-Factor Authentication Policy
+
+DOCUMENT_TYPE: policy
+
+CATEGORY: identity
+
+DEPARTMENT: identity_access_management
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines MFA requirements for enterprise systems.
+
+
+INDICATORS:
+- MFA disabled
+- Repeated MFA failures
+- MFA bypass attempts
+
+
+INITIAL_ACTIONS:
+1. Validate account activity
+2. Identify affected users
+
+
+CONTAINMENT:
+- Enforce MFA enrollment
+- Block unauthorized access
+
+
+ERADICATION:
+- Remove bypass mechanisms
+
+
+RECOVERY:
+- Restore account access
+
+
+COMMUNICATION:
+- Notify users
+
+
+ESCALATION:
+- Escalate privileged account violations
+
+
+REFERENCES:
+- Identity Security Standard

@@ -1,0 +1,61 @@
+TITLE: Ransomware Response Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: ransomware
+
+DEPARTMENT: incident_response
+
+SEVERITY: critical
+
+VERSION: 2.4
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines response procedures for ransomware incidents.
+
+
+INDICATORS:
+- Mass file encryption
+- Ransom notes
+- Backup deletion attempts
+- Suspicious PowerShell execution
+
+
+INITIAL_ACTIONS:
+1. Disconnect infected hosts
+2. Disable lateral movement
+3. Preserve volatile memory
+4. Notify executive leadership
+
+
+CONTAINMENT:
+- Isolate affected systems
+- Block malicious IPs
+
+
+ERADICATION:
+- Remove malicious persistence
+- Patch exploited vulnerabilities
+
+
+RECOVERY:
+- Restore offline backups
+- Rebuild systems
+
+
+COMMUNICATION:
+- Notify legal counsel
+- Notify cyber insurance provider
+- Prepare public relations guidance
+
+
+ESCALATION:
+- Escalate to IR lead if multiple hosts affected
+
+
+REFERENCES:
+- Internal IR SOP v3.2

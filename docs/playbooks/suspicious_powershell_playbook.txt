@@ -1,0 +1,56 @@
+TITLE: Suspicious PowerShell Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: powershell
+
+DEPARTMENT: security_operations
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for suspicious PowerShell execution.
+
+
+INDICATORS:
+- Encoded commands
+- Download cradles
+- Execution policy bypass
+- Hidden window execution
+
+
+INITIAL_ACTIONS:
+1. Collect command history
+2. Identify execution source
+3. Preserve evidence
+
+
+CONTAINMENT:
+- Restrict execution
+- Isolate affected systems
+
+
+ERADICATION:
+- Remove malicious scripts
+
+
+RECOVERY:
+- Restore affected systems
+
+
+COMMUNICATION:
+- Notify IR team
+
+
+ESCALATION:
+- Escalate if lateral movement detected
+
+
+REFERENCES:
+- PowerShell Detection Guide

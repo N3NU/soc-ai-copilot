@@ -1,0 +1,57 @@
+TITLE: Endpoint Isolation Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: endpoint_isolation
+
+DEPARTMENT: incident_response
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for isolating potentially compromised endpoints.
+
+
+INDICATORS:
+- Malware detection
+- Suspicious PowerShell activity
+- Unusual outbound connections
+- Active compromise indicators
+
+
+INITIAL_ACTIONS:
+1. Identify affected endpoint
+2. Determine business impact
+3. Preserve evidence
+
+
+CONTAINMENT:
+- Isolate endpoint from network
+- Restrict user activity
+
+
+ERADICATION:
+- Remove malicious artifacts
+- Patch vulnerabilities
+
+
+RECOVERY:
+- Reconnect system after validation
+
+
+COMMUNICATION:
+- Notify affected users
+
+
+ESCALATION:
+- Escalate if critical systems affected
+
+
+REFERENCES:
+- Incident Response SOP

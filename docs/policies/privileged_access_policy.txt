@@ -1,0 +1,58 @@
+TITLE: Privileged Access Policy
+
+DOCUMENT_TYPE: policy
+
+CATEGORY: privileged_access
+
+DEPARTMENT: identity_access_management
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines controls and requirements for privileged account usage.
+
+
+INDICATORS:
+- Shared administrator accounts
+- Unauthorized privilege escalation
+- Excessive permissions
+- Inactive privileged accounts
+
+
+INITIAL_ACTIONS:
+1. Identify affected accounts
+2. Review assigned permissions
+3. Verify business justification
+
+
+CONTAINMENT:
+- Disable unauthorized accounts
+- Remove excessive permissions
+
+
+ERADICATION:
+- Remove stale accounts
+- Remove unnecessary privileges
+
+
+RECOVERY:
+- Restore approved access
+
+
+COMMUNICATION:
+- Notify IAM team
+- Notify management
+
+
+ESCALATION:
+- Escalate unauthorized administrator activity
+
+
+REFERENCES:
+- IAM SOP v2.0

@@ -1,0 +1,46 @@
+TITLE: Suspicious Login Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: authentication
+
+DEPARTMENT: security_operations
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for suspicious login activity.
+
+INDICATORS:
+- Geographic anomalies
+- Failed login spikes
+- Unusual login times
+
+INITIAL_ACTIONS:
+1. Review login history
+2. Verify user activity
+
+CONTAINMENT:
+- Disable affected account
+- Revoke sessions
+
+ERADICATION:
+- Reset credentials
+
+RECOVERY:
+- Restore account access
+
+COMMUNICATION:
+- Notify user
+
+ESCALATION:
+- Escalate privileged accounts
+
+REFERENCES:
+- IAM SOP

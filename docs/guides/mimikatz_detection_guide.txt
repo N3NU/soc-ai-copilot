@@ -1,0 +1,28 @@
+TITLE: Mimikatz Detection Guide
+
+DOCUMENT_TYPE: detection_guide
+
+CATEGORY: credential_access
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines Mimikatz indicators.
+
+
+INDICATORS:
+- LSASS access
+- sekurlsa usage
+- Memory dump creation
+
+
+REFERENCES:
+- MITRE T1003

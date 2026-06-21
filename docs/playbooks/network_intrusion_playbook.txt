@@ -1,0 +1,56 @@
+TITLE: Network Intrusion Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: intrusion
+
+DEPARTMENT: security_operations
+
+SEVERITY: critical
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for suspected network intrusion.
+
+
+INDICATORS:
+- IDS alerts
+- Suspicious outbound traffic
+- Unauthorized connections
+- Port scanning
+
+
+INITIAL_ACTIONS:
+1. Identify affected assets
+2. Preserve logs
+3. Determine attack scope
+
+
+CONTAINMENT:
+- Block malicious IP addresses
+- Isolate affected systems
+
+
+ERADICATION:
+- Remove malicious artifacts
+
+
+RECOVERY:
+- Restore services
+
+
+COMMUNICATION:
+- Notify leadership
+
+
+ESCALATION:
+- Immediate escalation required
+
+
+REFERENCES:
+- Incident Response SOP

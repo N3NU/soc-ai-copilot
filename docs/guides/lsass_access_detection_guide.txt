@@ -1,0 +1,26 @@
+TITLE: LSASS Access Detection Guide
+
+DOCUMENT_TYPE: detection_guide
+
+CATEGORY: credential_access
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines indicators of suspicious LSASS access.
+
+INDICATORS:
+- LSASS memory access
+- Dump creation
+- Credential extraction tools
+
+REFERENCES:
+- MITRE T1003

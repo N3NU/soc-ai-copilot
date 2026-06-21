@@ -1,0 +1,41 @@
+TITLE: Escalation Matrix
+
+DOCUMENT_TYPE: matrix
+
+CATEGORY: escalation
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines incident escalation requirements.
+
+
+ESCALATION_RULES:
+
+Critical:
+- SOC Manager
+- Incident Response Lead
+- CISO
+- Legal
+
+High:
+- SOC Manager
+- Incident Response Lead
+
+Medium:
+- Senior Analyst
+
+Low:
+- Tier 1 Analyst
+
+
+REFERENCES:
+- Incident Management SOP

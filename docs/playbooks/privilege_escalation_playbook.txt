@@ -1,0 +1,46 @@
+TITLE: Privilege Escalation Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: privilege_escalation
+
+DEPARTMENT: incident_response
+
+SEVERITY: critical
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for privilege escalation activity.
+
+INDICATORS:
+- Unauthorized administrator access
+- Unexpected role changes
+- Privileged process execution
+
+INITIAL_ACTIONS:
+1. Identify affected systems
+2. Determine exposure scope
+
+CONTAINMENT:
+- Disable accounts
+- Restrict access
+
+ERADICATION:
+- Remove unauthorized permissions
+
+RECOVERY:
+- Restore approved privileges
+
+COMMUNICATION:
+- Notify leadership
+
+ESCALATION:
+- Immediate escalation required
+
+REFERENCES:
+- Privileged Access Policy

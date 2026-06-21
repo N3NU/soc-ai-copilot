@@ -1,0 +1,55 @@
+TITLE: Cloud Security Incident Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: cloud_security
+
+DEPARTMENT: cloud_security
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for cloud security incidents.
+
+
+INDICATORS:
+- Unauthorized API activity
+- Excessive permissions
+- Unusual geographic access
+
+
+INITIAL_ACTIONS:
+1. Identify affected resources
+2. Preserve logs
+3. Review permissions
+
+
+CONTAINMENT:
+- Disable affected accounts
+- Restrict API access
+
+
+ERADICATION:
+- Remove unauthorized permissions
+
+
+RECOVERY:
+- Restore services
+
+
+COMMUNICATION:
+- Notify cloud operations
+
+
+ESCALATION:
+- Escalate critical cloud incidents
+
+
+REFERENCES:
+- Cloud Security SOP

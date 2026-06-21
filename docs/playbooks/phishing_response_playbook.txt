@@ -1,0 +1,62 @@
+TITLE: Phishing Response Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: phishing
+
+DEPARTMENT: security_operations
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for phishing incident response.
+
+
+INDICATORS:
+- Suspicious sender domains
+- Credential harvesting links
+- Unexpected attachments
+- Urgent language requesting action
+
+
+INITIAL_ACTIONS:
+1. Identify affected users
+2. Collect suspicious emails
+3. Remove malicious emails from inboxes
+4. Notify SOC leadership
+
+
+CONTAINMENT:
+- Block malicious domains
+- Quarantine affected mailboxes
+- Disable compromised accounts
+
+
+ERADICATION:
+- Remove malicious emails
+- Reset compromised credentials
+- Revoke active sessions
+
+
+RECOVERY:
+- Restore account access
+- Monitor for additional activity
+
+
+COMMUNICATION:
+- Notify users
+- Notify IT support team
+
+
+ESCALATION:
+- Escalate if multiple users affected
+
+
+REFERENCES:
+- Email Security SOP v2.0

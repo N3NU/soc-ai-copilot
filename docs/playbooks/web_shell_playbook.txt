@@ -1,0 +1,49 @@
+TITLE: Web Shell Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: web_shell
+
+DEPARTMENT: incident_response
+
+SEVERITY: critical
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for suspected web shell activity.
+
+INDICATORS:
+- Unexpected web server files
+- Suspicious POST requests
+- Command execution activity
+- Unauthorized file uploads
+
+INITIAL_ACTIONS:
+1. Identify affected server
+2. Preserve logs
+3. Capture evidence
+
+CONTAINMENT:
+- Isolate server
+- Block malicious IPs
+
+ERADICATION:
+- Remove web shell files
+- Patch vulnerabilities
+
+RECOVERY:
+- Restore clean systems
+
+COMMUNICATION:
+- Notify IR team
+
+ESCALATION:
+- Immediate escalation required
+
+REFERENCES:
+- Incident Response SOP

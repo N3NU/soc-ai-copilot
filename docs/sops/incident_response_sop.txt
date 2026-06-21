@@ -1,0 +1,74 @@
+TITLE: Incident Response Standard Operating Procedure
+
+DOCUMENT_TYPE: sop
+
+CATEGORY: incident_response
+
+DEPARTMENT: security_operations
+
+SEVERITY: all
+
+VERSION: 3.2
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines the standard process for responding to cybersecurity incidents.
+
+
+INDICATORS:
+- Security alerts generated
+- Suspicious authentication activity
+- Malware detections
+- Unusual network traffic
+- User-reported security events
+
+
+INITIAL_ACTIONS:
+1. Validate alert authenticity
+2. Determine affected assets
+3. Identify indicators of compromise
+4. Assign severity level
+5. Notify IR leadership if required
+
+
+CONTAINMENT:
+- Isolate compromised hosts
+- Disable affected accounts
+- Block malicious IP addresses
+- Preserve forensic evidence
+
+
+ERADICATION:
+- Remove malicious files
+- Remove persistence mechanisms
+- Patch exploited vulnerabilities
+- Rotate credentials if necessary
+
+
+RECOVERY:
+- Restore affected systems
+- Validate system integrity
+- Return systems to production
+- Monitor for reinfection
+
+
+COMMUNICATION:
+- Notify affected stakeholders
+- Notify management
+- Update incident ticket status
+- Document actions taken
+
+
+ESCALATION:
+- Escalate critical incidents immediately
+- Escalate incidents affecting multiple business units
+- Escalate incidents involving sensitive data exposure
+
+
+REFERENCES:
+- Internal Escalation Matrix v2.1
+- Security Monitoring Guidelines v1.5
+- NIST Incident Response Framework

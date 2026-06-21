@@ -1,0 +1,28 @@
+TITLE: DNS Tunneling Detection Guide
+
+DOCUMENT_TYPE: detection_guide
+
+CATEGORY: network
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines DNS tunneling indicators.
+
+
+INDICATORS:
+- Long DNS queries
+- High DNS request volume
+- Suspicious domains
+
+
+REFERENCES:
+- MITRE T1071.004

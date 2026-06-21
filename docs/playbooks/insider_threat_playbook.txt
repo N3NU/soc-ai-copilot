@@ -1,0 +1,55 @@
+TITLE: Insider Threat Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: insider_threat
+
+DEPARTMENT: security_operations
+
+SEVERITY: critical
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines response procedures for insider threats.
+
+
+INDICATORS:
+- Excessive file access
+- Access outside normal hours
+- Data transfer anomalies
+
+
+INITIAL_ACTIONS:
+1. Preserve logs
+2. Identify user activity
+3. Notify leadership
+
+
+CONTAINMENT:
+- Suspend access
+- Restrict permissions
+
+
+ERADICATION:
+- Remove unauthorized access
+
+
+RECOVERY:
+- Restore required access
+
+
+COMMUNICATION:
+- Notify HR and legal
+
+
+ESCALATION:
+- Escalate immediately
+
+
+REFERENCES:
+- Insider Risk SOP v1.0

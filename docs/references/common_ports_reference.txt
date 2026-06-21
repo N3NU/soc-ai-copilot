@@ -1,0 +1,28 @@
+TITLE: Common Ports Reference
+
+DOCUMENT_TYPE: reference
+
+CATEGORY: networking
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines commonly used network ports.
+
+PORTS:
+20/21: FTP
+22: SSH
+23: Telnet
+25: SMTP
+53: DNS
+80: HTTP
+443: HTTPS
+3389: RDP

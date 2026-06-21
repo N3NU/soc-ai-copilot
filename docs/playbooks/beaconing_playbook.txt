@@ -1,0 +1,46 @@
+TITLE: Beaconing Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: command_control
+
+DEPARTMENT: security_operations
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for command-and-control beaconing activity.
+
+INDICATORS:
+- Periodic outbound traffic
+- Repeated external connections
+- Suspicious domains
+
+INITIAL_ACTIONS:
+1. Identify source host
+2. Review network logs
+
+CONTAINMENT:
+- Block communication channels
+- Isolate systems
+
+ERADICATION:
+- Remove malware
+
+RECOVERY:
+- Restore services
+
+COMMUNICATION:
+- Notify IR team
+
+ESCALATION:
+- Escalate active compromise
+
+REFERENCES:
+- C2 Detection Guide

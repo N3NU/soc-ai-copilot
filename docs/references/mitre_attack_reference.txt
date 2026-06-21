@@ -1,0 +1,42 @@
+TITLE: MITRE ATT&CK Reference
+
+DOCUMENT_TYPE: reference
+
+CATEGORY: mitre_attack
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines common MITRE ATT&CK techniques.
+
+
+TECHNIQUES:
+
+T1059.001:
+PowerShell execution
+
+T1003:
+Credential dumping
+
+T1110:
+Brute force
+
+T1071:
+Application layer protocol
+
+T1071.004:
+DNS tunneling
+
+T1021:
+Remote services
+
+T1041:
+Data exfiltration

@@ -1,0 +1,39 @@
+TITLE: Asset Criticality Matrix
+
+DOCUMENT_TYPE: matrix
+
+CATEGORY: asset_management
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines asset classifications.
+
+
+CRITICAL:
+- Domain controllers
+- Authentication services
+- Production databases
+
+HIGH:
+- File servers
+- Email servers
+
+MEDIUM:
+- Department applications
+
+LOW:
+- User workstations
+- Test systems
+
+
+REFERENCES:
+- Asset Inventory Standard

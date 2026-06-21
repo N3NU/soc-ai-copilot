@@ -1,0 +1,56 @@
+TITLE: Account Compromise Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: account_compromise
+
+DEPARTMENT: identity_access_management
+
+SEVERITY: high
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines response procedures for compromised accounts.
+
+
+INDICATORS:
+- Impossible travel alerts
+- Multiple failed logins
+- MFA bypass attempts
+
+
+INITIAL_ACTIONS:
+1. Identify compromised account
+2. Disable access
+3. Preserve evidence
+
+
+CONTAINMENT:
+- Revoke sessions
+- Reset credentials
+
+
+ERADICATION:
+- Remove malicious persistence
+
+
+RECOVERY:
+- Restore account access
+- Monitor activity
+
+
+COMMUNICATION:
+- Notify user
+
+
+ESCALATION:
+- Escalate privileged account incidents
+
+
+REFERENCES:
+- IAM SOP v2.0

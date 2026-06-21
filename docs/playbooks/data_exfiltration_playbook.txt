@@ -1,0 +1,57 @@
+TITLE: Data Exfiltration Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: data_exfiltration
+
+DEPARTMENT: incident_response
+
+SEVERITY: critical
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines response procedures for suspected data exfiltration.
+
+
+INDICATORS:
+- Large outbound transfers
+- Cloud storage uploads
+- Unusual DNS activity
+
+
+INITIAL_ACTIONS:
+1. Identify affected assets
+2. Preserve evidence
+3. Notify leadership
+
+
+CONTAINMENT:
+- Block transfer channels
+- Isolate systems
+
+
+ERADICATION:
+- Remove persistence
+- Disable compromised access
+
+
+RECOVERY:
+- Restore affected systems
+
+
+COMMUNICATION:
+- Notify legal
+- Notify compliance team
+
+
+ESCALATION:
+- Escalate immediately
+
+
+REFERENCES:
+- DLP SOP v1.5

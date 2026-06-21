@@ -1,0 +1,42 @@
+TITLE: Severity Classification Matrix
+
+DOCUMENT_TYPE: matrix
+
+CATEGORY: severity
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines incident severity classifications.
+
+
+SEVERITY_LEVELS:
+
+Critical:
+- Business operations disrupted
+- Sensitive data exposure
+- Active attacker presence
+
+High:
+- Multiple systems affected
+- Privileged account compromise
+
+Medium:
+- Single system impact
+- Limited business impact
+
+Low:
+- Informational alerts
+- Minimal risk
+
+
+REFERENCES:
+- Incident Management SOP

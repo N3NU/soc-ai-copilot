@@ -1,0 +1,56 @@
+TITLE: Lateral Movement Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: lateral_movement
+
+DEPARTMENT: incident_response
+
+SEVERITY: critical
+
+VERSION: 1.0
+
+CLASSIFICATION: confidential
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for suspected lateral movement activity.
+
+
+INDICATORS:
+- Remote service creation
+- Unusual authentication events
+- Pass-the-hash activity
+- Administrative shares usage
+
+
+INITIAL_ACTIONS:
+1. Identify affected assets
+2. Preserve evidence
+3. Determine movement scope
+
+
+CONTAINMENT:
+- Disable compromised accounts
+- Segment affected systems
+
+
+ERADICATION:
+- Remove attacker persistence
+
+
+RECOVERY:
+- Restore systems
+
+
+COMMUNICATION:
+- Notify leadership
+
+
+ESCALATION:
+- Immediate escalation required
+
+
+REFERENCES:
+- Incident Response SOP

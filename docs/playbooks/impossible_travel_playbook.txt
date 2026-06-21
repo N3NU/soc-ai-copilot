@@ -1,0 +1,55 @@
+TITLE: Impossible Travel Playbook
+
+DOCUMENT_TYPE: playbook
+
+CATEGORY: identity
+
+DEPARTMENT: identity_access_management
+
+SEVERITY: medium
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines procedures for impossible travel detections.
+
+
+INDICATORS:
+- Geographic login anomalies
+- Multiple login locations
+- MFA challenges
+
+
+INITIAL_ACTIONS:
+1. Validate user activity
+2. Review authentication logs
+3. Contact user
+
+
+CONTAINMENT:
+- Disable account if necessary
+- Revoke active sessions
+
+
+ERADICATION:
+- Reset credentials
+
+
+RECOVERY:
+- Restore access
+
+
+COMMUNICATION:
+- Notify user
+
+
+ESCALATION:
+- Escalate privileged accounts
+
+
+REFERENCES:
+- IAM SOP

@@ -1,0 +1,26 @@
+TITLE: Kerberos Attack Detection Guide
+
+DOCUMENT_TYPE: detection_guide
+
+CATEGORY: authentication
+
+DEPARTMENT: security_operations
+
+SEVERITY: informational
+
+VERSION: 1.0
+
+CLASSIFICATION: internal
+
+LAST_UPDATED: 2026-05-24
+
+PURPOSE:
+Defines indicators for Kerberos attacks.
+
+INDICATORS:
+- Kerberoasting activity
+- Ticket anomalies
+- Unusual service ticket requests
+
+REFERENCES:
+- MITRE T1558
