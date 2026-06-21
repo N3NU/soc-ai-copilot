@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 from app.config import LLM_MODEL
 from app.prompts.category_classifier_prompt import category_classifier_prompt
-from app.config import CATEGORY_KEYWORDS
+from app.config import CATEGORIES
 
 llm = ChatOllama(
     model=LLM_MODEL,
@@ -17,7 +17,7 @@ def ai_detect_category(query):
 
     category = response.content.strip().lower()
 
-    if category in CATEGORY_KEYWORDS:
+    if category in CATEGORIES:
         return category
 
     return None
