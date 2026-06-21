@@ -2,6 +2,9 @@ def section_classifier_prompt(query):
     prompt = f"""
     Classify the cybersecurity query into ONE section.
 
+    If the query does not clearly match any section, return:
+    none
+
     sections:
 
     purpose
@@ -14,7 +17,7 @@ def section_classifier_prompt(query):
     escalation
     references
 
-    Return ONLY the section name.
+    Return ONLY the section name or none.
 
     Query:
     {query}

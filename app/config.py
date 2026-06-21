@@ -174,3 +174,15 @@ CATEGORY_KEYWORDS = {
         "recovery"
     ]
 }
+
+SECTION_KEYWORDS = [
+    "purpose",
+    "indicators",
+    "initial_actions",
+    "containment",
+    "eradication",
+    "recovery",
+    "communication",
+    "escalation",
+    "references"
+]
