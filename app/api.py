@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 from app.services.copilot_service import process_query
 from app.services.session_store import sessions
+from app.config import MAX_CHAT_HISTORY
 
 app = FastAPI()
 
@@ -55,6 +56,8 @@ def analyze(request: QueryRequest):
     session["chat_history"].append(
         f"Assistant: {result['response']}"
     )
+
+    session["chat_history"] = session["chat_history"][-MAX_CHAT_HISTORY:]
 
     return QueryResponse(
         query=request.query,
