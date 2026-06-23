@@ -17,6 +17,7 @@ class QueryResponse(BaseModel):
     query: str
     rewritten_query: str
     category: str | None
+    section: str | None
     current_topic: str | None
     source: str
     answer: str
@@ -63,6 +64,7 @@ def analyze(request: QueryRequest):
         query=request.query,
         rewritten_query=result["rewritten_query"],
         category=result["category"],
+        section=result["section"],
         current_topic=result["current_topic"],
         source=result["source"],
         answer=result["response"],

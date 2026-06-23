@@ -46,6 +46,7 @@ def process_query(query, chat_history, current_topic):
         "response": response.content,
         "rewritten_query": rewritten_query,
         "category": category,
+        "section": section,
         "current_topic": current_topic,
         "source": source,
         "distance": distance
