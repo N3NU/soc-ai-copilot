@@ -15,19 +15,6 @@ The application provides:
 
 <img width="739" height="591" alt="image" src="https://github.com/user-attachments/assets/c7b0c3c1-7e6f-4d98-87a3-aef0f5f4ea12" />
 
-## Features
-
-- AI-powered cybersecurity assistant
-- Retrieval-Augmented Generation (RAG)
-- ChromaDB vector search
-- Metadata filtering
-- AI category classification
-- AI section classification
-- Session memory
-- Source attribution
-- FastAPI backend
-- Streamlit frontend
-
 ## Tech Stack
 
 - Python
