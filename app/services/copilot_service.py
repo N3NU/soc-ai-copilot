@@ -49,5 +49,5 @@ def process_query(query, chat_history, current_topic):
         "section": section,
         "current_topic": current_topic,
         "source": source,
-        "distance": distance
+        "distance": round(distance, 3)
     }

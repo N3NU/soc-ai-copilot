@@ -51,3 +51,11 @@ if prompt:
 
     with st.chat_message("assistant"):
         st.write(answer)
+
+        st.caption(
+    f"""
+Category: {data['category']}
+Source: {data['source']}
+Distance: {data['distance']}
+"""
+)
