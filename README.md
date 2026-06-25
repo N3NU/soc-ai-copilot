@@ -17,33 +17,67 @@ The application provides:
 
 ## Installation
 
-`n3nu@LABORATORY:~/Demo$ python3 -m venv venv`
+### Prerequisites (Model can be changed in soc-ai-copilot/config.py)
 
-`n3nu@LABORATORY:~/Demo$ source venv/bin/activate`
+Install Ollama:
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+Start Ollama:
+```bash
+ollama serve
+```
+Pull the model:
+```bash
+ollama pull llama3
+```
 
-`(venv) n3nu@LABORATORY:~/Demo$ git clone https://github.com/N3NU/soc-ai-copilot.git`
-
-`(venv) n3nu@LABORATORY:~/Demo$ cd soc-ai-copilot/`
-
-`(venv) n3nu@LABORATORY:~/Demo/soc-ai-copilot$ pip install -r requirements.txt`
-
-`(venv) n3nu@LABORATORY:~/Demo/soc-ai-copilot$ python -m app.ingestion.ingest`
+### Set up environment and clone SOC AI Copilot
+Use following two commands to create a virtual environment, optional but highly recommended (do it)
+```bash
+python3 -m venv venv
+```
+```bash
+source venv/bin/activate
+```
+Clone SOC AI Copilot
+```bash
+git clone https://github.com/N3NU/soc-ai-copilot.git
+```
+```bash
+cd soc-ai-copilot
+```
+```bash
+pip install -r requirements.txt
+```
+```bash
+python -m app.ingestion.ingest
+```
 
 ## Modes
 
 ### CLI
-
-`(venv) n3nu@LABORATORY:~/Demo/soc-ai-copilot$ python -m app.main`
-
+```bash
+python -m app.main
+```
 ### API
-
-`(venv) n3nu@LABORATORY:~/Demo/soc-ai-copilot$ uvicorn app.api:app --reload`
-
+```bash
+uvicorn app.api:app --reload
+```
 ### Web UI
+```bash
+uvicorn app.api:app --reload
+```
+```bash
+streamlit run frontend.py
+```
 
-`(venv) n3nu@LABORATORY:~/Demo/soc-ai-copilot$ uvicorn app.api:app --reload`
+## Example Queries
 
-`(venv) n3nu@LABORATORY:~/Demo/soc-ai-copilot$ streamlit run frontend.py`
+- What are ransomware indicators?
+- How do I contain a phishing incident?
+- What are psexec indicators?
+- Explain impossible travel alerts.
 
 ## Tech Stack
 
