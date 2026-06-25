@@ -13,6 +13,7 @@ The application provides:
 
 ## Demo
 
+<img width="739" height="591" alt="image" src="https://github.com/user-attachments/assets/c7b0c3c1-7e6f-4d98-87a3-aef0f5f4ea12" />
 
 ## Features
 
