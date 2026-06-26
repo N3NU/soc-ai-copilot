@@ -1,17 +1,6 @@
+from app.config import BLOCKLIST
 
 
-
-
-# -------------------------
-# BASIC PROMPT INJECTION FILTER
-# -------------------------
-
-BLOCKLIST = [
-    "ignore previous instructions",
-    "reveal sensitive information",
-    "administrator passwords",
-    "you are no longer"
-]
 
 def is_malicious(text):
     text = text.lower()
@@ -26,13 +15,13 @@ def filter_malicious_chunks(reranked_results):
 
     safe_results = []
 
-    for r, score in reranked_results:
+    for r, original_score, rerank_score, confidence in reranked_results:
 
         if is_malicious(r.page_content):
             print(f"\n[BLOCKED MALICIOUS CHUNK]: {r.metadata.get('source')}")
             print(f"[BLOCKED MALICIOUS CHUNK]: {r.page_content}")
             continue
 
-        safe_results.append((r, score))
+        safe_results.append((r, original_score, rerank_score, confidence))
     
     return safe_results

@@ -19,9 +19,10 @@ class QueryResponse(BaseModel):
     category: str | None
     section: str | None
     current_topic: str | None
-    source: str
+    source: str | None
     answer: str
-    distance: float
+    distance: float | None
+    confidence: str | None
 
 
 @app.get("/")
@@ -68,6 +69,7 @@ def analyze(request: QueryRequest):
         current_topic=result["current_topic"],
         source=result["source"],
         answer=result["response"],
-        distance=result["distance"]
+        distance=result["distance"],
+        confidence=result["confidence"]
     )
 

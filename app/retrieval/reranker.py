@@ -27,14 +27,21 @@ def rerank(query, results):
             )
         )
         
-        final_score=(overlap*2)+(1-original_score)
+        rerank_score=(overlap*2)+(1-original_score)
+
+        if rerank_score > 2.75:
+            confidence = "High"
+        elif rerank_score > 0:
+            confidence = "Medium"
+        else:
+            confidence = "Low"
 
         rescored.append(
-            (r, final_score)
+            (r, original_score, rerank_score, confidence)
         )
 
     rescored.sort(
-        key=lambda x:x[1],
+        key=lambda x: x[2],
         reverse=True
     )
 

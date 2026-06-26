@@ -10,6 +10,13 @@ ROUTING_MODEL = "qwen2.5:0.5b"
 RETRIEVAL_K = 4
 MAX_CHAT_HISTORY = 30
 
+BLOCKLIST = [
+    "ignore previous instructions",
+    "reveal sensitive information",
+    "administrator passwords",
+    "you are no longer"
+]
+
 META_KEYS = [
     "TITLE",
     "DOCUMENT_TYPE",

@@ -46,6 +46,8 @@ STRICT RULES:
 
 7. If no ambiguity exists, return the original question unchanged.
 
+8. Example: If you see ransomware was the conversation topic then it might be what the current question is related to. 
+
 Conversation:
 {history_text}
 

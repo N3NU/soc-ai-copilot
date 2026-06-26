@@ -36,7 +36,7 @@ def process_query(query, chat_history, current_topic):
         category,
         section
     )
-#    print(f"{filters}")
+    print(f"FILTERS: {filters}")
     safe_results = get_relevant_documents(
         rewritten_query,
         filters
@@ -44,7 +44,20 @@ def process_query(query, chat_history, current_topic):
     print(
         f"Retrieval time: {time.time() - start:.2f}s"
     )
-    top_doc, distance = safe_results[0]
+
+    if not safe_results:
+        return {
+            "response": "I could not find any relevant documents for your query.",
+            "rewritten_query": rewritten_query,
+            "category": category,
+            "section": section,
+            "current_topic": current_topic,
+            "source": None,
+            "distance": None,
+            "confidence": None
+        }
+
+    top_doc, distance, rerank_score, confidence = safe_results[0]
 
     source = top_doc.metadata["source"]
     start = time.time()
@@ -67,5 +80,6 @@ def process_query(query, chat_history, current_topic):
         "section": section,
         "current_topic": current_topic,
         "source": source,
-        "distance": round(distance, 3)
+        "distance": round(distance, 3),
+        "confidence": confidence
     }

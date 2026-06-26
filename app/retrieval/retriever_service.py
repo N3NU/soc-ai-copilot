@@ -11,8 +11,9 @@ def get_relevant_documents(query, filters=None):
 #        print(f"=" * 50)
     # Step 2: rerank
     reranked = rerank(query, results)
-
+    print(f"RESULTS: {results}")
     # Step 3: safety filter
-    safe = filter_malicious_chunks(results)
-    print(f"Chuck: {safe[0]}")
+    safe = filter_malicious_chunks(reranked)
+#    print(f"Chunk: {safe[0]}")
+    print(f"SAFE: {safe}")
     return safe

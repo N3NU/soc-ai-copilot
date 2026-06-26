@@ -1,37 +1,40 @@
 
-
 def category_classifier_prompt(query):
-    prompt = f"""
-    Classify the query into ONE category.
+    return f"""
+Classify the cybersecurity query into ONE category.
 
-    If the query does not clearly match any category, return:
-    none
+Valid categories:
 
-    For example, if the query says "What are mimikatz indicators?" you would response with "ransomware" because that is the category.
+ransomware
+phishing
+account_compromise
+credential_access
+lateral_movement
+beaconing
+network_intrusion
+data_exfiltration
+privilege_escalation
+suspicious_powershell
+impossible_travel
+suspicious_login
+web_shell
+insider_threat
+cloud_security
+identity
+incident_response
 
-    Categories:
+If the query:
+- is unrelated to cybersecurity,
+- is gibberish,
+- is too vague,
+- or cannot confidently be assigned to exactly one category,
 
-    ransomware
-    phishing
-    account_compromise
-    credential_access
-    lateral_movement
-    beaconing
-    network_intrusion
-    data_exfiltration
-    privilege_escalation
-    suspicious_powershell
-    impossible_travel
-    suspicious_login
-    web_shell
-    insider_threat
-    cloud_security
-    identity
-    incident_response
+return ONLY:
 
-    Return ONLY the category name or none.
+none
 
-    Query:
-    {query}
-    """
-    return prompt
+Otherwise return ONLY the category name.
+
+Query:
+{query}
+"""

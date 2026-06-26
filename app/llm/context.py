@@ -11,10 +11,12 @@ CATEGORY: {r.metadata.get('category')}
 
 DEPARTMENT: {r.metadata.get('department')}
 
+CONFIDENCE: {confidence}
+
 CONTENT:
 {r.page_content}
 """
-        for r, score in safe_results
+        for r, original_score, rerank_score, confidence in safe_results
     ])
 #    print(f"+" * 50)
 #    print(f"{context}")

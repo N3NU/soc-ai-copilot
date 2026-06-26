@@ -61,6 +61,7 @@ def run():
         print_answer(result["response"])
         print(f"Source: {result["source"]}")
         print(f"Distance: {result["distance"]}")
+        print(f"Confidence: {result["confidence"]}")
 
         chat_history.append(f"User: {result["rewritten_query"]}")
         chat_history.append(f"Assistant: {result["response"]}")
