@@ -16,6 +16,6 @@ CONTENT:
 """
         for r, score in safe_results
     ])
-    print(f"+" * 50)
-    print(f"{context}")
+#    print(f"+" * 50)
+#    print(f"{context}")
     return context

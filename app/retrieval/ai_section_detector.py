@@ -1,10 +1,10 @@
 from langchain_ollama import ChatOllama
-from app.config import LLM_MODEL
+from app.config import ROUTING_MODEL
 from app.prompts.section_classifier_prompt import section_classifier_prompt
 from app.config import SECTION_KEYWORDS
 
 llm = ChatOllama(
-    model=LLM_MODEL,
+    model=ROUTING_MODEL,
     temperature=0
 )
 

@@ -1,12 +1,12 @@
 from langchain_ollama import OllamaEmbeddings, ChatOllama
-from app.config import LLM_MODEL
+from app.config import ROUTING_MODEL
 
 # -------------------------
 # LOAD LLM
 # -------------------------
 
 llm = ChatOllama(
-    model=LLM_MODEL,
+    model=ROUTING_MODEL,
     temperature=0
 )
 

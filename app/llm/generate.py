@@ -3,7 +3,8 @@ from app.config import LLM_MODEL
 
 llm = ChatOllama(
     model=LLM_MODEL,
-    temperature=0
+    temperature=0,
+    num_predict=150
 )
 
 def generate_response(prompt):
