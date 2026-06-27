@@ -98,6 +98,6 @@ streamlit run frontend.py
 - [x] Session memory
 - [x] FastAPI backend
 - [x] Streamlit frontend
-- [ ] Confidence scoring
+- [x] Confidence scoring
 - [ ] SQLite session storage
 - [ ] Authentication
