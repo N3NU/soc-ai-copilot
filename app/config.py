@@ -7,6 +7,7 @@ EMBED_MODEL = "nomic-embed-text"
 LLM_MODEL = "llama3"
 ROUTING_MODEL = "qwen2.5:0.5b"
 
+#top-k retrieval needs tuning
 RETRIEVAL_K = 4
 MAX_CHAT_HISTORY = 30
 
