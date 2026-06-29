@@ -27,9 +27,12 @@ Start Ollama:
 ```bash
 ollama serve
 ```
-Pull the model:
+Pull the models:
 ```bash
 ollama pull llama3
+```
+```bash
+ollama pull qwen2.5:0.5b
 ```
 
 ### Set up environment and clone SOC AI Copilot
