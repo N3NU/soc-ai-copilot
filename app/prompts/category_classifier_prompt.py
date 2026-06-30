@@ -1,4 +1,4 @@
-
+#Compare with section classifier prompt. That prompt seems more strict
 def category_classifier_prompt(query):
     return f"""
 Classify the cybersecurity query into ONE category.
