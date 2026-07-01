@@ -1,6 +1,7 @@
 DOCS_PATH = "./docs"
 
 DB_PATH = "./chroma_db"
+#Reminder to implement more collections in the future
 COLLECTION_NAME = "secure_rag"
 
 EMBED_MODEL = "nomic-embed-text"
