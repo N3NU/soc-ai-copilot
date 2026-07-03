@@ -13,6 +13,7 @@ ROUTING_MODEL = "qwen2.5:0.5b"
 RETRIEVAL_K = 4
 MAX_CHAT_HISTORY = 30
 
+#Create more robust blocklist
 BLOCKLIST = [
     "ignore previous instructions",
     "reveal sensitive information",
