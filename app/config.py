@@ -1,3 +1,4 @@
+#Reminder to reingest logs
 DOCS_PATH = "./docs"
 
 DB_PATH = "./chroma_db"
