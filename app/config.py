@@ -31,7 +31,7 @@ META_KEYS = [
     "CLASSIFICATION",
     "LAST_UPDATED"
 ]
-
+#Clean up keywords
 CATEGORY_KEYWORDS = {
 
     "ransomware": [
