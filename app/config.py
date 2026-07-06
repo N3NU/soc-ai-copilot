@@ -4,7 +4,7 @@ DOCS_PATH = "./docs"
 DB_PATH = "./chroma_db"
 #Reminder to implement more collections in the future
 COLLECTION_NAME = "secure_rag"
-
+#test out other models
 EMBED_MODEL = "nomic-embed-text"
 LLM_MODEL = "llama3"
 ROUTING_MODEL = "qwen2.5:0.5b"
