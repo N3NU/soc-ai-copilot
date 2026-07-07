@@ -2,11 +2,12 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from app.services.copilot_service import process_query
-from app.services.session_store import sessions
-from app.config import MAX_CHAT_HISTORY
+from app.database.schema import initialize_database
+from app.database.session_repository import create_session, get_chat_history, get_current_topic, update_current_topic, save_message
 
 app = FastAPI()
 
+initialize_database()
 
 class QueryRequest(BaseModel):
     session_id: str
@@ -35,31 +36,26 @@ def root():
 @app.post("/analyze", response_model=QueryResponse)
 def analyze(request: QueryRequest):
 
-    if request.session_id not in sessions:
-        sessions[request.session_id] = {
-        "chat_history": [],
-        "current_topic": None
-    }
+    create_session(request.session_id)
 
-    session = sessions[request.session_id]
+    history = get_chat_history(request.session_id)
+
+    current_topic = get_current_topic(request.session_id)
 
     result = process_query(
     query=request.query,
-    chat_history=session["chat_history"],
-    current_topic=session["current_topic"]
+    chat_history=history,
+    current_topic=current_topic
     )
 
-    session["current_topic"] = result["current_topic"]
-
-    session["chat_history"].append(
-        f"User: {result['rewritten_query']}"
+    update_current_topic(
+        request.session_id,
+        result["current_topic"]
     )
 
-    session["chat_history"].append(
-        f"Assistant: {result['response']}"
-    )
+    save_message(request.session_id, "user", result["rewritten_query"])
 
-    session["chat_history"] = session["chat_history"][-MAX_CHAT_HISTORY:]
+    save_message(request.session_id, "assistant", result["response"])
 
     return QueryResponse(
         query=request.query,

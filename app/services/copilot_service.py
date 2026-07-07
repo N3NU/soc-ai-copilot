@@ -18,6 +18,7 @@ def process_query(query, chat_history, current_topic):
     print(f"{rewritten_query}\n")
     start = time.time()
     category = detect_category(rewritten_query)
+    print(category)
     print(
         f"Category detection time: {time.time() - start:.2f}s"
     )

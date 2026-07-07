@@ -54,6 +54,9 @@ Conversation:
 Question:
 {query}
 
+DO NOT ANSWER QUESTIONS
+ONLY RETURN REWRITTEN QUESTION
+
 Standalone question:
 """
 

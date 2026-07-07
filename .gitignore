@@ -16,3 +16,8 @@ __pycache__/
 
 #ChromaDB
 chroma_db/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
