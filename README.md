@@ -85,6 +85,7 @@ streamlit run frontend.py
 ## Tech Stack
 
 - Python
+- SQLite
 - FastAPI
 - Streamlit
 - LangChain
