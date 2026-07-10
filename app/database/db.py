@@ -1,5 +1,6 @@
 import sqlite3
 
+#Move path DB_PATH to config file
 DB_PATH = "soc_ai.db"
 
 
