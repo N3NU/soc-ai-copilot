@@ -105,3 +105,5 @@ streamlit run frontend.py
 - [x] Confidence scoring
 - [x] SQLite session storage
 - [ ] Authentication
+
+Complete by 7/31
