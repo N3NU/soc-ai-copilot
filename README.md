@@ -104,6 +104,6 @@ streamlit run frontend.py
 - [x] Streamlit frontend
 - [x] Confidence scoring
 - [x] SQLite session storage
-- [ ] Authentication
+- [ ] Fix Rewrite Prompt
 
 

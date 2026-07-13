@@ -1,18 +1,10 @@
-from langchain_ollama import OllamaEmbeddings, ChatOllama
+from langchain_ollama import  ChatOllama
 from app.config import ROUTING_MODEL
-
-# -------------------------
-# LOAD LLM
-# -------------------------
 
 llm = ChatOllama(
     model=ROUTING_MODEL,
     temperature=0
 )
-
-# -------------------------
-# REWRITE FUNCTION
-# -------------------------
 
 def rewrite_query(query, history):
 
