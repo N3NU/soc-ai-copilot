@@ -106,4 +106,4 @@ streamlit run frontend.py
 - [x] SQLite session storage
 - [ ] Authentication
 
-Complete by 7/31
+
