@@ -3,6 +3,9 @@ DOCS_PATH = "./docs"
 
 DB_PATH = "./chroma_db"
 #Reminder to implement more collections in the future
+
+DB_PATH = "soc_ai.db"
+
 COLLECTION_NAME = "secure_rag"
 #test out other models
 EMBED_MODEL = "nomic-embed-text"

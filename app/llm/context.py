@@ -1,6 +1,3 @@
-
-
-
 def context_builder(safe_results):
     context = "\n\n".join([
         f"""SOURCE: {r.metadata.get('source')}

@@ -1,5 +1,6 @@
-from app.config import CATEGORY_KEYWORDS
 import re
+
+from app.config import CATEGORY_KEYWORDS
 
 def keyword_detect_category(query):
 

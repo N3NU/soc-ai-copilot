@@ -1,8 +1,6 @@
 import sqlite3
 
-#Move path DB_PATH to config file
-DB_PATH = "soc_ai.db"
-
+from app.config import DB_PATH
 
 def get_connection():
     conn = sqlite3.connect(DB_PATH)

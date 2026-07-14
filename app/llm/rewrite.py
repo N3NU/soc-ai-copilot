@@ -1,4 +1,5 @@
 from langchain_ollama import  ChatOllama
+
 from app.config import ROUTING_MODEL
 
 llm = ChatOllama(
@@ -6,50 +7,79 @@ llm = ChatOllama(
     temperature=0
 )
 
-def rewrite_query(query, history):
+def rewrite_query(query, current_topic):
 
-    if len(history) == 0:
+    if not current_topic:
         return query
+    
+    print(f"\nHistory TEXT:\n{current_topic}\n")
+    rewrite_prompt = f"""
+You are a query rewriting system.
 
-    history_text="\n".join(
-        history[-6:]
-    )
-    print(f"\nHistory TEXT:\n{history_text}\n")
-    rewrite_prompt=f"""
-You rewrite follow-up questions into standalone questions.
+Your ONLY job is to rewrite follow-up questions into standalone questions.
 
-STRICT RULES:
+You are NOT an assistant.
+You are NOT allowed to answer questions.
+You are NOT allowed to explain anything.
 
-1. Preserve intent exactly.
-2. Never answer the question.
-3. Never summarize.
-4. Never introduce new actions.
-5. Never replace:
-   "next"
-   "before"
-   "after"
-   "then"
+Rules:
 
-6. Only replace ambiguous references:
-   "it"
-   "that"
-   "this"
-   "they"
+- Preserve the user's intent exactly.
+- Replace ambiguous references only when necessary:
+    - it
+    - that
+    - this
+    - they
+    - them
+    - these
+    - those
 
-7. If no ambiguity exists, return the original question unchanged.
+- Use the conversation only to resolve those references.
+- If the question is already standalone, return it unchanged.
+- Never summarize previous messages.
+- Never introduce new information.
+- Never add investigation steps.
+- Never answer the question.
 
-8. Example: If you see ransomware was the conversation topic then it might be what the current question is related to. 
+Examples:
 
 Conversation:
-{history_text}
+User: What are ransomware indicators?
+Assistant: ...
+
+Question:
+How do I recover from it?
+
+Output:
+How do I recover from ransomware?
+
+Conversation:
+User: Explain Mimikatz.
+Assistant: ...
+
+Question:
+What MITRE technique does it use?
+
+Output:
+What MITRE technique does Mimikatz use?
+
+Conversation:
+User: What are phishing indicators?
+Assistant: ...
+
+Question:
+What are phishing indicators?
+
+Output:
+What are phishing indicators?
+
+Conversation:
+{current_topic}
 
 Question:
 {query}
 
-DO NOT ANSWER QUESTIONS
-ONLY RETURN REWRITTEN QUESTION
-
-Standalone question:
+Return ONLY the rewritten question.
 """
 
     rewritten=llm.invoke(

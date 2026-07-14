@@ -8,9 +8,9 @@ from app.config import (
 )
 
 
-# -------------------------
+
 # REMOVE METADATA FROM DOC BEFORE CHUNKING
-# -------------------------
+
 
 def remove_metadata_block(text):
 
@@ -27,9 +27,9 @@ def remove_metadata_block(text):
 #    print("\n".join(cleaned))
     return "\n".join(cleaned)
 
-# -------------------------
+
 # PARSE METADATA HEADER
-# -------------------------
+
 
 def extract_metadata(text):
 
@@ -43,9 +43,9 @@ def extract_metadata(text):
 #    print(f"metadata:\n\n{metadata}")
     return metadata
 
-# -------------------------
+
 # SECTION SPLITTING
-# -------------------------
+
 
 def split_sections(text, metadata):
 #    print(text)
@@ -75,9 +75,9 @@ def split_sections(text, metadata):
 
     return chunks
 
-# -------------------------
+
 # LOAD FILES RECURSIVELY
-# -------------------------
+
 
 def load_docs():
 
@@ -104,9 +104,9 @@ def load_docs():
 #    print(f"{docs}")
     return docs
 
-# -------------------------
+
 # INGEST INTO CHROMA
-# -------------------------
+
 
 def ingest():
 

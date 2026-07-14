@@ -7,32 +7,22 @@ from app.llm.context import context_builder
 from app.llm.prompt import prompt_builder
 from app.config import MAX_CHAT_HISTORY
 from app.retrieval.detect_section_service import detect_section
-import time
+
 
 def process_query(query, chat_history, current_topic):
-    start = time.time()
-    rewritten_query = rewrite_query(query, chat_history)
-    print(
-        f"Rewrite time: {time.time() - start:.2f}s"
-    )
-    print(f"{rewritten_query}\n")
-    start = time.time()
+
+    rewritten_query = rewrite_query(query, current_topic)
+
     category = detect_category(rewritten_query)
     print(category)
-    print(
-        f"Category detection time: {time.time() - start:.2f}s"
-    )
-    start = time.time()
+
     section = detect_section(rewritten_query)
-    print(
-        f"Section detection time: {time.time() - start:.2f}s"
-    )
 
     if category:
         current_topic = category
     elif current_topic:
         category = current_topic
-    start = time.time()
+ 
     filters = metadata_filter(
         category,
         section
@@ -42,9 +32,7 @@ def process_query(query, chat_history, current_topic):
         rewritten_query,
         filters
     )
-    print(
-        f"Retrieval time: {time.time() - start:.2f}s"
-    )
+
 
     if not safe_results:
         return {
@@ -61,19 +49,15 @@ def process_query(query, chat_history, current_topic):
     top_doc, distance, rerank_score, confidence = safe_results[0]
 
     source = top_doc.metadata["source"]
-    start = time.time()
+
     context = context_builder(safe_results)
-    print(
-        f"Context building time: {time.time() - start:.2f}s"
-    )
+
     history = "\n".join(chat_history[-MAX_CHAT_HISTORY:])
-    start = time.time()
+
     prompt = prompt_builder(history, context, rewritten_query)
     print(f"PROMPT: {prompt}")
     response = generate_response(prompt)
-    print(
-        f"LLM generation time: {time.time() - start:.2f}s"
-    )
+
     return {
         "response": response.content,
         "rewritten_query": rewritten_query,

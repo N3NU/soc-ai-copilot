@@ -1,4 +1,5 @@
 from langchain_ollama import ChatOllama
+
 from app.config import ROUTING_MODEL
 from app.prompts.category_classifier_prompt import category_classifier_prompt
 from app.config import CATEGORIES

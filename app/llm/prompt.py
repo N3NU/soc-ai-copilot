@@ -1,6 +1,3 @@
-
-
-#System prompt needs work
 def prompt_builder(history, context, rewritten_query):
     prompt = f"""
 You are a cybersecurity assistant.
