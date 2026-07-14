@@ -93,17 +93,4 @@ streamlit run frontend.py
 - ChromaDB
 - Pydantic
 
-## Roadmap
-
-- [x] ChromaDB integration
-- [x] Query rewriting
-- [x] Category detection
-- [x] Section detection
-- [x] Session memory
-- [x] FastAPI backend
-- [x] Streamlit frontend
-- [x] Confidence scoring
-- [x] SQLite session storage
-- [ ] Fix Rewrite Prompt
-
 
