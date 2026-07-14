@@ -34,6 +34,9 @@ ollama pull llama3
 ```bash
 ollama pull qwen2.5:0.5b
 ```
+```bash
+ollama pull nomic-embed-text:latest
+```
 
 ### Set up environment and clone SOC AI Copilot
 Use following two commands to create a virtual environment, optional but highly recommended (do it)
